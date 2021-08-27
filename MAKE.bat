@@ -22,6 +22,7 @@ if [ "$(uname)" != "Darwin" ]; then
     chmod +x art/tools/mid2wav
     chmod +x art/tools/xml2json
     chmod +x art/tools/ffmpeg
+    chmod +x art/tools/assimp
 
     # framework
     echo fwk            && cc -c fwk.c -w -g
