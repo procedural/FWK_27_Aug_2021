@@ -16,6 +16,12 @@ if [ "$(uname)" != "Darwin" ]; then
     #cc art/tools/mid2wav.c   -o art/tools/mid2wav  -lm -ldl -lpthread -w -g
     #cc art/tools/xml2json.c  -o art/tools/xml2json -lm -ldl -lpthread -w -g
 
+    # NOTE(Constantine): Change permissions of precompiled tools binaries because of 'Permission denied' runtime error.
+    chmod +x art/tools/ass2iqe
+    chmod +x art/tools/iqe2iqm
+    chmod +x art/tools/mid2wav
+    chmod +x art/tools/xml2json
+
     # framework
     echo fwk            && cc -c fwk.c -w -g
 
